@@ -1,0 +1,99 @@
+<style>
+  /* ===========================
+   Nirmiti Royal Ganeshotsav Mandal
+   External Stylesheet
+   =========================== */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fdf5e6;
+  color: #333;
+  text-align: center;
+}
+
+/* HEADER STYLES */
+header {
+  background: linear-gradient(90deg, #ff9933, #ffcc66);
+  padding: 20px;
+  color: white;
+}
+header h1 {
+  margin: 0;
+}
+nav a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* HERO SECTION */
+.hero img {
+  max-width: 400px;
+  border-radius: 15px;
+  margin: 20px auto;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* SECTIONS */
+section {
+  padding: 40px 20px;
+}
+
+/* RECEIPT BOX */
+.receipt-box {
+  background: #fff3cd;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  margin: auto;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+input[type=text] {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  text-align: center;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 20px;
+  background: #ff9933;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #e68a00;
+}
+
+/* FOOTER */
+footer {
+  background: #333;
+  color: white;
+  padding: 10px;
+  margin-top: 30px;
+}
+<link rel="stylesheet" href="style.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>निर्मिती राॅयल गणेशोत्सव मंडळ, देसाई इस्टेट, बारामती</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>निर्मिती राॅयल गणेशोत्सव मंडळ, देसाई इस्टेट, बारामती</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+</style>
