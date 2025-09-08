@@ -118,10 +118,17 @@
         return;
       }
       const fileUrl = number + ".jpg"; // example: 7276249199.jpg
+      
       fetch(fileUrl, { method: 'HEAD' })
         .then(res => {
           if (res.ok) {
-            window.location.href = fileUrl;
+            // Force automatic download
+            const link = document.createElement('a');
+            link.href = fileUrl;
+            link.download = fileUrl;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
             message.textContent = "";
           } else {
             message.textContent = "पावती सापडली नाही.";
@@ -134,4 +141,3 @@
   </script>
 </body>
 </html>
-
