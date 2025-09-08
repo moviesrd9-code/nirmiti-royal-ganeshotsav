@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>निर्मिती राॅयल गणेशोत्सव मंडळ</title>
+
+  <!-- Embedded CSS -->
+  <style>
+    /* Global Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f7f1e3;
+      display: flex;
+      flex-direction: row;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 250px;
+      background-color: #6b1a1a;
+      min-height: 100vh;
+      color: white;
+      padding: 20px 0;
+      box-shadow: 3px 0px 8px rgba(0, 0, 0, 0.2);
+      position: fixed;
+      left: 0;
+      top: 0;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar ul li {
+      margin: 10px 0;
+    }
+
+    .sidebar ul li a {
+      display: block;
+      color: white;
+      padding: 12px 20px;
+      font-weight: bold;
+      font-size: 16px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .sidebar ul li a:hover,
+    .sidebar ul li a.active {
+      background-color: #a02222;
+      border-left: 5px solid #f3c744;
+      color: #f3c744;
+    }
+
+    /* Main Content */
+    .main-content {
+      margin-left: 250px;
+      width: calc(100% - 250px);
+      padding: 0;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('assets/ganesha.jpg') center/cover no-repeat;
+      height: 600px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      color: white;
+      padding: 40px;
+    }
+
+    .hero-text {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 400px;
+    }
+
+    .hero-text h1 {
+      font-size: 28px;
+      color: #f3c744;
+      line-height: 1.4;
+    }
+
+    .hero-text p {
+      margin-top: 5px;
+      font-size: 16px;
+    }
+
+    /* Receipt Section */
+    .receipt-section {
+      background-color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .receipt-box {
+      background-color: #600000;
+      color: white;
+      padding: 25px;
+      max-width: 500px;
+      margin: auto;
+      border-radius: 15px;
+      box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .receipt-box h2 {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #f3c744;
+    }
+
+    .receipt-box input {
+      width: 60%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: none;
+      text-align: center;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .receipt-box button {
+      padding: 12px 20px;
+      background-color: #f3c744;
+      border: none;
+      color: #222;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .receipt-box button:hover {
+      background-color: #e6b800;
+    }
+
+    .receipt-box p {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #ffcccc;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #6b1a1a;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      margin-top: 30px;
+    }
+
+    footer .social-icons img {
+      width: 26px;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+
+    /* Responsive */
+    @media screen and (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+      .sidebar {
+        width: 100%;
+        position: relative;
+        box-shadow: none;
+      }
+      .main-content {
+        margin-left: 0;
+        width: 100%;
+      }
+      .hero {
+        height: 400px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar Navigation -->
+  <div class="sidebar">
+    <ul>
+      <li><a href="#home" class="active">यात्रा</a></li>
+      <li><a href="#home">मुख्यपृष्ठ</a></li>
+      <li><a href="#about">मंडळ बद्दल</a></li>
+      <li><a href="#gallery">गणेशोत्सव</a></li>
+      <li><a href="#receipt">गॅलरी</a></li>
+      <li><a href="#ganpati">गणपंक</a></li>
+      <li><a href="#contact">संपर्क</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-text">
+        <h1>निमित्ती राॅयल<br>गणेशोत्सव मंडळ</h1>
+        <p>देसाई इस्टेट, बारामती</p>
+      </div>
+    </section>
+
+    <!-- Receipt Download Section -->
+    <section id="receipt" class="receipt-section">
+      <div class="receipt-box">
+        <h2>आपली पावती डाउनलोड करा</h2>
+        <input type="text" id="receiptNumber" maxlength="10" placeholder="येथे 10 अंकी क्रमांक भरा">
+        <br>
+        <button onclick="downloadReceipt()">आता पावती डाउनलोड करा</button>
+        <p id="message"></p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>©2025 निर्मिती राॅयल गणेशोत्सव मंडळ, देसाई इस्टेट, बारामती</p>
+    </footer>
+  </div>
+
+  <!-- JavaScript for Receipt Download -->
+  <script>
+    function downloadReceipt() {
+      const number = document.getElementById('receiptNumber').value.trim();
+      const message = document.getElementById('message');
+
+      if (number.length !== 10 || isNaN(number)) {
+        message.textContent = "कृपया 10 अंकी योग्य क्रमांक टाका.";
+        message.style.color = "yellow";
+        return;
+      }
+
+      const fileUrl = "receipts/" + number + ".jpg";
+
+      fetch(fileUrl, { method: 'HEAD' })
+        .then(res => {
+          if (res.ok) {
+            const link = document.createElement('a');
+            link.href = fileUrl;
+            link.download = number + ".jpg";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            message.textContent = "";
+          } else {
+            message.textContent = "पावती सापडली नाही.";
+            message.style.color = "red";
+          }
+        })
+        .catch(() => {
+          message.textContent = "पावती सापडली नाही.";
+          message.style.color = "red";
+        });
+    }
+  </script>
+</body>
+</html>
