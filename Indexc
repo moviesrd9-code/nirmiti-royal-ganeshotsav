@@ -1,0 +1,231 @@
+
+!DOCTYPE html>
+<style>
+  /* ===========================
+   Nirmiti Royal Ganeshotsav Mandal
+   External Stylesheet
+   =========================== */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fdf5e6;
+  color: #333;
+  text-align: center;
+}
+
+/* HEADER STYLES */
+header {
+  background: linear-gradient(90deg, #ff9933, #ffcc66);
+  padding: 20px;
+  color: white;
+}
+header h1 {
+  margin: 0;
+}
+nav a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* HERO SECTION */
+.hero img {
+  max-width: 400px;
+  border-radius: 15px;
+  margin: 20px auto;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* SECTIONS */
+section {
+  padding: 40px 20px;
+}
+
+/* RECEIPT BOX */
+.receipt-box {
+  background: #fff3cd;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  margin: auto;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+input[type=text] {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  text-align: center;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 20px;
+  background: #ff9933;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #e68a00;
+}
+
+/* FOOTER */
+footer {
+  background: #333;
+  color: white;
+  padding: 10px;
+  margin-top: 30px;
+}
+
+</style>
+
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>निर्मिती राॅयल गणेशोत्सव मंडळ, देसाई इस्टेट, बारामती</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fdf5e6;
+      color: #333;
+      text-align: center;
+    }
+    header {
+      background: linear-gradient(90deg, #ff9933, #ffcc66);
+      padding: 20px;
+      color: white;
+    }
+    header h1 { margin: 0; }
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero img {
+      max-width: 400px;
+      border-radius: 15px;
+      margin: 20px auto;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    }
+    section {
+      padding: 40px 20px;
+    }
+    .receipt-box {
+      background: #fff3cd;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+    }
+    input[type=text] {
+      width: 80%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      text-align: center;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      background: #ff9933;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    footer {
+      background: #333;
+      color: white;
+      padding: 10px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>निर्मिती राॅयल गणेशोत्सव मंडळ</h1>
+    <p>देसाई इस्टेट, बारामती</p>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">मंडळ बद्दल</a>
+      <a href="#gallery">गॅलरी</a>
+      <a href="#receipt">पावती डाउनलोड</a>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <img src="ganesha.jpg" alt="Lord Ganesha">
+    <h2>|| गणपती बाप्पा मोरया ||</h2>
+  </section>
+
+  <section id="about">
+    <h2>मंडळ बद्दल</h2>
+    <p>निर्मिती राॅयल गणेशोत्सव मंडळ, देसाई इस्टेट, बारामती हे भक्तांच्या श्रद्धा आणि सामाजिक कार्यासाठी ओळखले जाते. आमचे ध्येय भक्तिभाव आणि एकतेने गणेशोत्सव साजरा करणे आहे.</p>
+  </section>
+
+  <section id="gallery">
+    <h2>गॅलरी</h2>
+    <p>लवकरच येथे आमच्या गणेशोत्सवाचे फोटो आणि व्हिडिओ अपलोड केले जातील.</p>
+  </section>
+
+  <section id="receipt">
+    <h2>पावती डाउनलोड</h2>
+    <div class="receipt-box">
+      <p>तुमचा 10 अंकी क्रमांक टाका:</p>
+      <input type="text" id="receiptNumber" placeholder="उदा. 7276249199">
+      <br>
+      <button onclick="downloadReceipt()">पावती डाउनलोड करा</button>
+      <p id="message" style="color:red;"></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 निर्मिती राॅयल गणेशोत्सव मंडळ, देसाई इस्टेट, बारामती</p>
+  </footer>
+
+  <script>
+    function downloadReceipt() {
+      const number = document.getElementById('receiptNumber').value.trim();
+      const message = document.getElementById('message');
+      if (number.length !== 10) {
+        message.textContent = "कृपया 10 अंकी योग्य क्रमांक टाका.";
+        return;
+      }
+      const fileUrl = number + ".jpg"; // example: 7276249199.jpg
+      
+      fetch(fileUrl, { method: 'HEAD' })
+        .then(res => {
+          if (res.ok) {
+            // Force automatic download
+            const link = document.createElement('a');
+            link.href = fileUrl;
+            link.download = fileUrl;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            message.textContent = "";
+          } else {
+            message.textContent = "पावती सापडली नाही.";
+          }
+        })
+        .catch(() => {
+          message.textContent = "पावती सापडली नाही.";
+        });
+    }
+  </script>
+</body>
+</html>
