@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>निर्मिती राॅयल गणेशोत्सव मंडळ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="top-header">
+    <div class="logo">
+      <img src="assets/ganesha.jpg" alt="Lord Ganesha">
+    </div>
+    <div class="header-text">
+      <h1>निर्मिती राॅयल गणेशोत्सव मंडळ</h1>
+      <p>देसाई इस्टेट, बारामती</p>
+    </div>
+    <nav class="top-nav">
+      <ul>
+        <li><a href="#home">होम</a></li>
+        <li><a href="#about">मंडळ बद्दल</a></li>
+        <li><a href="#gallery">गॅलरी</a></li>
+        <li><a href="#receipt">पावती डाउनलोड</a></li>
+        <li><a href="#contact">संपर्क</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <ul>
+      <li><a href="#home" class="active">यात्रा</a></li>
+      <li><a href="#about">मुख्यपृष्ठ</a></li>
+      <li><a href="#mandal">मंडळ बद्दल</a></li>
+      <li><a href="#gallery">गणेशोत्सव</a></li>
+      <li><a href="#receipt">गॅलरी</a></li>
+      <li><a href="#contact">गणपंक</a></li>
+      <li><a href="#contact">संपर्क</a></li>
+    </ul>
+  </aside>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h2>|| गणपती बाप्पा मोरया ||</h2>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="content-section">
+    <h2>मंडळ बद्दल</h2>
+    <p>
+      निर्मिती राॅयल गणेशोत्सव मंडळ, देसाई इस्टेट, बारामती हे भक्तांच्या श्रद्धा आणि सामाजिक कार्यासाठी ओळखले जाते.
+      आमचे ध्येय भक्तिभाव, परंपरा आणि एकतेने गणेशोत्सव साजरा करणे आहे.
+    </p>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="content-section">
+    <h2>गॅलरी</h2>
+    <p>लवकरच येथे आमच्या गणेशोत्सवाचे फोटो आणि व्हिडिओ अपलोड केले जातील.</p>
+  </section>
+
+  <!-- Receipt Download -->
+  <section id="receipt" class="receipt-section">
+    <h2>आपली पावती डाउनलोड करा</h2>
+    <div class="receipt-box">
+      <p>येथे 10 अंकी क्रमांक भरा:</p>
+      <input type="text" id="receiptNumber" maxlength="10" placeholder="उदा. 7276249199">
+      <button onclick="downloadReceipt()">पावती डाउनलोड करा</button>
+      <p id="message" class="error"></p>
+    </div>
+    <ul class="note">
+      <li>पावती शोधा! करा डाउनलोड करा.</li>
+      <li>पावती सापडली नाही, कृपया क्रमांक तपासा.</li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>©2025 निर्मिती राॅयल गणेशोत्सव मंडळ</p>
+    <div class="social-icons">
+      <a href="#"><img src="assets/facebook.png" alt="Facebook"></a>
+      <a href="#"><img src="assets/twitter.png" alt="Twitter"></a>
+      <a href="#"><img src="assets/instagram.png" alt="Instagram"></a>
+    </div>
+  </footer>
+
+  <!-- Script for Receipt Download -->
+  <script>
+    function downloadReceipt() {
+      const number = document.getElementById('receiptNumber').value.trim();
+      const message = document.getElementById('message');
+
+      if (number.length !== 10 || isNaN(number)) {
+        message.textContent = "कृपया 10 अंकी मोबाईल क्रमांक योग्य टाका.";
+        return;
+      }
+
+      const fileUrl = "receipts/" + number + ".jpg";
+
+      fetch(fileUrl, { method: 'HEAD' })
+        .then(res => {
+          if (res.ok) {
+            const link = document.createElement('a');
+            link.href = fileUrl;
+            link.download = number + ".jpg";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            message.textContent = "";
+          } else {
+            message.textContent = "पावती सापडली नाही.";
+          }
+        })
+        .catch(() => {
+          message.textContent = "पावती सापडली नाही.";
+        });
+    }
+  </script>
+</body>
+</html>
