@@ -1,91 +1,116 @@
 
 !DOCTYPE html>
-<style>
-  /* ===========================
-   Nirmiti Royal Ganeshotsav Mandal
-   External Stylesheet
-   =========================== */
-
+/* General Styles */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #fdf5e6;
+  background-color: #fdf5e6;
   color: #333;
-  text-align: center;
+  line-height: 1.6;
 }
 
-/* HEADER STYLES */
+/* Header */
 header {
-  background: linear-gradient(90deg, #ff9933, #ffcc66);
-  padding: 20px;
+  background-color: #4a0000;
+  padding: 15px;
+  text-align: center;
   color: white;
 }
 header h1 {
-  margin: 0;
+  margin: 10px 0 5px;
+  font-size: 28px;
 }
-nav a {
-  margin: 0 15px;
-  color: white;
+header p {
+  margin: 0;
+  font-size: 16px;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+nav ul li a {
+  color: #fff;
   text-decoration: none;
   font-weight: bold;
+  padding: 8px 14px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+nav ul li a:hover {
+  background-color: #ff9933;
 }
 
-/* HERO SECTION */
-.hero img {
-  max-width: 400px;
-  border-radius: 15px;
-  margin: 20px auto;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+/* Hero Section */
+.hero {
+  background: url('assets/ganesha.jpg') center/cover no-repeat;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-content h2 {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 28px;
+  border-radius: 10px;
 }
 
-/* SECTIONS */
+/* Sections */
 section {
   padding: 40px 20px;
+  text-align: center;
 }
 
-/* RECEIPT BOX */
+/* Receipt Box */
 .receipt-box {
-  background: #fff3cd;
+  background-color: #fff3cd;
   padding: 20px;
   border-radius: 10px;
   max-width: 400px;
   margin: auto;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 3px 8px rgba(0,0,0,0.2);
 }
-
-input[type=text] {
+input[type="text"] {
   width: 80%;
   padding: 10px;
   margin: 10px 0;
   border-radius: 5px;
   border: 1px solid #ccc;
   text-align: center;
-  font-size: 16px;
 }
-
 button {
-  padding: 10px 20px;
-  background: #ff9933;
-  color: white;
+  background-color: #ff9933;
+  color: #fff;
+  padding: 10px 18px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
+  font-weight: bold;
 }
-
 button:hover {
-  background: #e68a00;
+  background-color: #e68a00;
+}
+.error {
+  color: red;
+  margin-top: 8px;
 }
 
-/* FOOTER */
+/* Footer */
 footer {
-  background: #333;
+  background-color: #333;
   color: white;
+  text-align: center;
   padding: 10px;
-  margin-top: 30px;
 }
-
-</style>
+footer .social-icons img {
+  width: 24px;
+  margin: 0 5px;
+}
 
 <html lang="mr">
 <head>
